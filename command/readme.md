@@ -68,13 +68,20 @@ $ sudo systemctl start docker
 - https://success.docker.com/article/how-do-i-set-the-docker-daemon-options
 
 ```bash
+$ git clone git@github.com:iz4blue/190329_Azure_VM_GPU_Jupyter.git
+```
+
+```bash
 $ sudo systemctl stop docker
 $ sudo mkdir -p /opt/docker_container/
 $ ps aux | grep docker
 ```
 
-cat /etc/systemd/system/multi-user.target.wants/docker.service
-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -g /opt/docker_container/
+```bash
+$ cd ~/190329_Azure_VM_GPU_Jupyter/command/
+$ sudo patch /lib/systemd/system/docker.service < docker-systemd.patch
+$ cd ~/
+```
 
 ```bash
 $ sudo mount /dev/sdb1 /opt/docker_container/
