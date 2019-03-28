@@ -93,7 +93,6 @@ $ sudo systemctl start docker
 # keras 용 docker 생성
 
 ```bash
-$ git clone git@github.com:iz4blue/190329_Azure_VM_GPU_Jupyter.git
 $ mkdir ~/Data
 $ cd 190329_Azure_VM_GPU_Jupyter/keras
 $ sudo make GPU=0
