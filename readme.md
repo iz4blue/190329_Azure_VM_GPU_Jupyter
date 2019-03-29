@@ -22,3 +22,7 @@
 - https://www.putty.org/
 - https://www.iterm2.com/
 - https://www.docker.com
+
+# 실험 데이터
+
+- https://www.cs.toronto.edu/~kriz/cifar.html
