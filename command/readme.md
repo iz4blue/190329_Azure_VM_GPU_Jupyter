@@ -78,9 +78,7 @@ $ ps aux | grep docker
 ```
 
 ```bash
-$ cd ~/190329_Azure_VM_GPU_Jupyter/command/
-$ sudo patch /lib/systemd/system/docker.service < docker-systemd.patch
-$ cd ~/
+$ sudo patch /lib/systemd/system/docker.service < ~/190329_Azure_VM_GPU_Jupyter/command/docker-systemd.patch
 ```
 
 ```bash
@@ -94,6 +92,6 @@ $ sudo systemctl start docker
 
 ```bash
 $ mkdir ~/Data
-$ cd 190329_Azure_VM_GPU_Jupyter/keras
-$ sudo make GPU=0
+$ cd ~/190329_Azure_VM_GPU_Jupyter/keras
+$ sudo make notebook GPU=0
 ```
