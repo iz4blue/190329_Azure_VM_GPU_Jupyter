@@ -77,10 +77,7 @@ $ sudo nvidia-docker ps
 - https://success.docker.com/article/how-do-i-set-the-docker-daemon-options
 
 ```bash
-$ git clone git@github.com:iz4blue/190329_Azure_VM_GPU_Jupyter.git
-```
-
-```bash
+$ git clone https://github.com/iz4blue/190329_Azure_VM_GPU_Jupyter.git
 $ sudo systemctl stop docker
 $ sudo mkdir -p /opt/docker_container/
 $ ps aux | grep docker
@@ -96,11 +93,15 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl start docker
 ```
 
+```bash
+$ sudo ls /opt/docker_container/
+```
 
 # keras 용 docker 생성
 
 ```bash
 $ mkdir ~/Data
+$ cp ~/190329_Azure_VM_GPU_Jupyter/notebook/* ~/Data/
 $ cd ~/190329_Azure_VM_GPU_Jupyter/keras
 $ sudo make notebook GPU=0
 ```
