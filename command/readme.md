@@ -26,6 +26,9 @@ $ sudo apt-get update
 $ sudo apt-get install -y docker-ce=5:18.09.3~3-0~ubuntu-bionic  containerd.io docker-ce-cli
 ```
 
+```bash
+$ sudo docker ps
+```
 
 # cuda 드라이버 설치
 
@@ -36,7 +39,11 @@ $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_6
 $ sudo dpkg -i cuda-repo-ubuntu1804_10.1.105-1_amd64.deb
 $ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 $ sudo apt-get update
-$ sudo apt-get install cuda
+$ sudo apt-get install -y cuda
+```
+
+```bash
+$ nvidia-smi
 ```
 
 # cuda 드라이버 로딩
@@ -56,12 +63,14 @@ $ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 $ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
   sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 $ sudo apt-get update
-
 $ sudo apt-get install -y nvidia-docker2
 $ sudo systemctl stop docker
 $ sudo systemctl start docker
 ```
 
+```bash
+$ sudo nvidia-docker ps
+```
 
 # docker container 저장소 변경하기
 
