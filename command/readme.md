@@ -105,3 +105,25 @@ $ cp ~/190329_Azure_VM_GPU_Jupyter/notebook/* ~/Data/
 $ cd ~/190329_Azure_VM_GPU_Jupyter/keras
 $ sudo make notebook GPU=0
 ```
+
+# keras 사용 후 종료
+
+- ctrl + c 누르고 y 를 눌러서 종료
+- 프롬프트가 나오는지 확인
+
+# 만들어진 keras 도커 이미지를 OS 디스크로 복사
+
+```bash
+$ cd ~/
+$ sudo systemctl stop docker
+$ sudo mv /opt/docker_container /opt/docker_container_tmp
+$ sudo cp -rp /mnt/ /opt/docker_container/
+$ sudo systemctl start docker
+```
+
+# 이후 다시 가상머신을 다시 사용하실 때는 이 명령어만 치시면 됨
+
+```bash
+$ cd ~/190329_Azure_VM_GPU_Jupyter/keras
+$ sudo make notebook GPU=0
+```
