@@ -111,7 +111,7 @@ $ sudo make notebook GPU=0
 - ctrl + c 누르고 y 를 눌러서 종료
 - 프롬프트가 나오는지 확인
 
-# 만들어진 keras 도커 이미지를 OS 디스크로 복사
+# Jupyter Docker 이미지를 OS 디스크로 복사
 
 ```bash
 $ cd ~/
